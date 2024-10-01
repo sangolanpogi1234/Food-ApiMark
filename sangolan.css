@@ -1,0 +1,113 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    height: 100vh;
+    margin: 0;
+    background-color: #fafafa; /* Soft white background */
+    padding-bottom: 20px; /* Adds padding at the bottom */
+}
+
+#box-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    border: 2px solid #d1c7c2;
+    box-sizing: border-box;
+    height: auto; /* Auto height to avoid excessive space */
+    margin-top: 20px; /* Add some margin from the top */
+}
+
+
+h1 {
+    font-size: 32px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+#search-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f3f3f3;
+    color: #5a5a5a;
+}
+
+#search-button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #ae22ca;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#search-button:hover {
+    background-color: #a213bf;
+}
+
+#result-container {
+    margin-top: 20px;
+    text-align: left;
+    color: #555;
+    font-size: 14px; /* Reduced font size */
+    height: auto; /* Allow the result container to grow */
+}
+
+/* Each result box */
+.result-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px; /* Reduce margins */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Make the result boxes more compact */
+.result-box h2 {
+    font-size: 18px; /* Smaller heading */
+    margin-bottom: 10px;
+}
+
+.result-box p {
+    margin: 8px 0;
+    font-size: 14px; /* Smaller text size for content */
+}
+#result-container {
+    margin-top: 20px;
+    text-align: left;
+    color: #555;
+    font-size: 14px;
+    height: auto; /* Allow the result container to grow */
+    min-height: 100px; /* Ensures some space even if empty */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #ccc; /* Optional: A light border to visualize the box */
+}
+
+/* Optional placeholder styling */
+#result-container::before {
+    content: 'Search results will appear here...';
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Hide placeholder when there is content */
+#result-container.has-results::before {
+    content: '';
+}
